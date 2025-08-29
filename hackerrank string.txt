@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import sys
+
+for line in sys.stdin:
+    for x in range(int(line.strip())):
+        current_string = str(sys.stdin.readline().strip())
+        even_string = ''
+        odd_string = ''
+        for x in range(len(current_string)):
+            if x % 2 == 0:
+                even_string += current_string[x]
+            else:
+                odd_string += current_string[x]
+        print(even_string, odd_string)
