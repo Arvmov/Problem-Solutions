@@ -1,0 +1,13 @@
+import sys
+
+for line in sys.stdin:
+    if '-1' == line.strip():
+        break
+    prev_time = 0
+    total_dist = 0
+    for x in range(int(line.strip())):
+        mph, current_time = map(int, sys.stdin.readline().split())
+        current_dist = (current_time - prev_time) * mph
+        total_dist += current_dist
+        prev_time = current_time
+    print(total_dist, " miles")
