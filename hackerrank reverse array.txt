@@ -1,0 +1,20 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+    
+    new_array_string = ""
+    for x in range(n, 0, -1):
+        string_arr = str(arr[x-1])
+        new_array_string = new_array_string + string_arr + " "
+    print(new_array_string)

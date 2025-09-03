@@ -1,0 +1,27 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    array = []
+    while n > 0:
+        remainder = n % 2
+        n = math.floor(n / 2)
+        array.append(remainder)
+    largest_result = 0
+    count = 0
+    for x in range(len(array)):
+        if array[x] == 1:
+            count += 1
+            if count > largest_result:
+                largest_result = count
+        elif array[x] == 0:
+            count = 0
+    print(largest_result)
